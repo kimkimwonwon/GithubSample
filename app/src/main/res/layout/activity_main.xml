@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainpink"
+    android:theme="@style/Apptheme"
+    android:visibility="visible"
+    app:statusBarBackground="#AA6B6B"
+    tools:context=".SplashScreen"
+    tools:visibility="visible">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Apptheme"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_settings"
+                app:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <Button
+                android:id="@+id/store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:fontFamily="@font/binggrre"
+                android:text="@string/reward"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/catImage"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:contentDescription="@string/conversation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/talkWitCatmal"
+                app:srcCompat="@drawable/goyang" />
+
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="70dp"
+                android:background="#00D7FF96"
+                app:layout_constraintBottom_toBottomOf="@id/talkWitCat"
+                app:layout_constraintEnd_toEndOf="@id/talkWitCat"
+                app:layout_constraintStart_toStartOf="@id/talkWitCat"
+                app:layout_constraintTop_toTopOf="@id/talkWitCat">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:defaultNavHost="true"
+
+                    />
+
+                />
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/talkWitCatmal"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="70dp"
+                android:background="#00D7FF96"
+                android:src="@drawable/mal2"
+                app:layout_constraintBottom_toBottomOf="@id/talkWitCat"
+                app:layout_constraintEnd_toEndOf="@id/talkWitCat"
+                app:layout_constraintStart_toStartOf="@id/talkWitCat"
+                app:layout_constraintTop_toTopOf="@id/talkWitCat" />
+
+            <TextView
+                android:id="@+id/talkWitCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/binggrre"
+                android:text=""
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/catImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/mainpink"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Apptheme"
+            app:headerLayout="@layout/nav_header"
+            app:itemTextColor="@color/white2"
+            app:menu="@menu/nav_menu" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    <include layout="@layout/fragment_calendar"></include>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

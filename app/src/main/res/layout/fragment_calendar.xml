@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Apptheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/calendarFragment"
+    app:behavior_peekHeight = "50dp"
+    android:background="@color/mainpink"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+
+    <ImageView
+        android:background="@color/white2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/ic_baseline_keyboard_arrow_up_24"></ImageView>
+
+    <FrameLayout
+        android:id="@+id/mtrl_calendar_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="35dp"
+        >
+
+        <CalendarView
+            android:background="@color/white"
+            android:outlineSpotShadowColor="@color/white2"
+            android:dateTextAppearance="@android:style/TextAppearance.Small"
+            android:weekNumberColor="@color/white2"
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            />
+
+
+    </FrameLayout>
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/DiaryContentRecyclerView"-->
+<!--        android:layout_width="160dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_marginStart="35dp"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/DiaryAnalyzeRecyclerView"-->
+<!--        android:layout_width="160dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_marginEnd="35dp"-->
+<!--    S    android:layout_marginTop="35dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/calendarView" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FishFragment"
+    android:background="@color/mainpink">
+
+    <ImageView
+        android:id="@+id/fishimage"
+        android:background="@color/mainpink"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/fishdoodle"
+        />
+    <ImageButton
+        android:id="@+id/fishbutton"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="250dp"
+        android:layout_alignBottom="@id/fishimage"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+</RelativeLayout>

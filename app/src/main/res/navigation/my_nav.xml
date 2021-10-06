@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/settingFragment">
+
+    <activity
+        android:id="@+id/MainFragment"
+        android:name="fastcampus.aop.part2.main.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+    <fragment
+        android:id="@+id/writediaryFragment"
+        android:name="fastcampus.aop.part2.main.fragments.WritediaryFragment"
+        android:label="fragment_writediary"
+        tools:layout="@layout/fragment_writediary" >
+        <action
+            android:id="@+id/action_writediaryFragment_to_fishFragment"
+            app:destination="@id/fishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fishFragment"
+        android:name="fastcampus.aop.part2.main.fragments.FishFragment"
+        android:label="fragment_fish"
+        tools:layout="@layout/fragment_fish" >
+        <action
+            android:id="@+id/action_fishFragment_to_writediaryFragment"
+            app:destination="@id/writediaryFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">main</string>
+    <string name="reward">200코인</string>
+    <string name="conversation">고양이의말</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">hello</string>
+    <string name="close">bye</string>
+</resources>

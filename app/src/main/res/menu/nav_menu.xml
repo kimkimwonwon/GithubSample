@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <item android:title="설정">
+        <menu>
+                <item
+                    android:id="@+id/nav_backup"
+                    android:title="-백업 및 복구"/>
+                <item
+                    android:id="@+id/nav_lock"
+                    android:title="-잠금"/>
+
+                <item
+                    android:id="@+id/nav_select_language"
+                    android:title="-언어 설정"/>
+
+                <item
+                    android:id="@+id/nav_alarm_setting"
+                    android:title="-알람 설정"/>
+
+        </menu>
+
+    </item>
+
+    <item android:title="피드백">
+        <menu>
+
+
+                <item
+                    android:id="@+id/nav_give_rate"
+                    android:title="-별점 주기"/>
+
+                <item
+                    android:id="@+id/nav_give_idea"
+                    android:title="-의견 주기"/>
+                <item
+                    android:id="@+id/nav_ask"
+                    android:title="-문의하기"/>
+
+
+
+        </menu>
+    </item>
+
+
+    <item android:title="기타">
+
+        <menu>
+
+                <item
+                    android:id="@+id/nav_terms"
+                    android:title="-이용약관"/>
+
+                <item
+                    android:id="@+id/nav_info_terms"
+                    android:title="-개인정보 정책"/>
+                <item
+                    android:id="@+id/nav_license"
+                    android:title="-라이센스"/>
+                <item
+                    android:id="@+id/nav_info_business"
+                    android:title="-사업자 정보"/>
+
+
+        </menu>
+    </item>
+
+
+</menu>
